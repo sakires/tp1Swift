@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BaptisteDeschampsTp1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Année de naissance" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e0b-xC-LLe">
+                                <rect key="frame" x="10" y="137" width="384" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na9-Qs-2ZJ">
+                                <rect key="frame" x="10" y="248" width="384" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oo-A8-QKb">
+                                <rect key="frame" x="269" y="334" width="125" height="30"/>
+                                <color key="backgroundColor" red="0.1092496756443119" green="0.32279892189927029" blue="0.85191832073937823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="iJW-I2-jfb"/>
+                                    <constraint firstAttribute="height" constant="30" id="q26-aX-VS9"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Calculer votre age"/>
+                                <connections>
+                                    <action selector="CalculerAge:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ur-bB-k35"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e0b-xC-LLe" secondAttribute="trailing" constant="20" id="7Yp-H1-ydU"/>
+                            <constraint firstItem="3Oo-A8-QKb" firstAttribute="trailing" secondItem="na9-Qs-2ZJ" secondAttribute="trailing" id="FF9-D7-epe"/>
+                            <constraint firstItem="e0b-xC-LLe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="I2C-Aq-GKz"/>
+                            <constraint firstItem="na9-Qs-2ZJ" firstAttribute="trailing" secondItem="e0b-xC-LLe" secondAttribute="trailing" id="Pjf-xC-Zaz"/>
+                            <constraint firstItem="3Oo-A8-QKb" firstAttribute="top" secondItem="na9-Qs-2ZJ" secondAttribute="bottom" constant="65" id="hWe-xg-PHZ"/>
+                            <constraint firstItem="na9-Qs-2ZJ" firstAttribute="leading" secondItem="e0b-xC-LLe" secondAttribute="leading" id="hqS-l9-Y4d"/>
+                            <constraint firstItem="na9-Qs-2ZJ" firstAttribute="top" secondItem="e0b-xC-LLe" secondAttribute="bottom" constant="81" id="mli-bA-cBX"/>
+                            <constraint firstItem="e0b-xC-LLe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="tmz-8z-DcA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="TxtAnneeNaissance" destination="e0b-xC-LLe" id="5sd-Ob-QKZ"/>
+                        <outlet property="affichageAge" destination="na9-Qs-2ZJ" id="Omf-Zm-xFE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
