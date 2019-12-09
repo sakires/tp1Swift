@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var TxtAnneeNaissance: UITextField!
     @IBOutlet weak var affichageAge: UILabel!
@@ -19,15 +19,27 @@ class ViewController: UIViewController {
     }
 
     @IBAction func CalculerAge(_ sender: Any) {
-        let valAnneeNaissance = Int(TxtAnneeNaissance.text!)
-        let valAnneeEnCours = Calendar.current.component(.year, from: Date())
-        let valAge = valAnneeEnCours - valAnneeNaissance!
-        affichageAge.text = "votre age est : " + String(valAge)
+
+        affichageAge.text = "votre age est : \(age())"
         self.view.endEditing(true)
     }
     
+    func age()-> Int {
+        let valAnneeNaissance = Int(TxtAnneeNaissance.text!)
+        let valAnneeEnCours = Calendar.current.component(.year, from: Date())
+        let valAge = valAnneeEnCours - valAnneeNaissance!
+        return valAge
+    }
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        affichageAge.text = "votre age est : \(age())"
+        return true
     }
     
 }
